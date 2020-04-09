@@ -1,0 +1,12 @@
+name: ci
+on: [push, pull_request]
+
+jobs:
+  install:
+    name: Brew install
+    runs-on: macos-latest
+    steps:
+      - name:
+        run: |
+          brew install mfuentesg/tap/ksd
+          expr "ksd version" : ".* v[0-9].[0-9].[0-9]" >/dev/null
