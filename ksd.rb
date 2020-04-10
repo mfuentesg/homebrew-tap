@@ -7,11 +7,11 @@ class Ksd < Formula
 
   if OS.mac?
     url "https://github.com/mfuentesg/ksd/releases/download/v1.0.6/ksd_1.0.6_Darwin_x86_64.tar.gz"
-    sha256 "9073ebb86d8589853f59c999aeb6b95c496836e04c3b3f73c0f87505e9337883"
+    sha256 "0ebbf0f7fd7019c5c9ebe0f738f457fb50633fe82e105632972dc70b30bd65bd"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/mfuentesg/ksd/releases/download/v1.0.6/ksd_1.0.6_Linux_x86_64.tar.gz"
-      sha256 "9f5044203ac1d3661b15221b3e5f17dbcd258de70b2b43bec4cd5c516dc3b471"
+      sha256 "d55888e72065756e5f4c15f5a3601706651a20f747ed4a359a80f378eb14b8e4"
     end
   end
 
