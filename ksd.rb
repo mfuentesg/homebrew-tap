@@ -7,12 +7,12 @@ class Ksd < Formula
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/mfuentesg/ksd/releases/download/v1.0.6/ksd_1.0.6_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy.
-    sha256 "e8804839a8d1aa359b47121fac7a13d3a053750ad609cd9fb243f372312141b7"
+    url "https://github.com/mfuentesg/ksd/releases/download/v1.0.6/ksd_1.0.6_Darwin_x86_64.tar.gz", :using => :curl
+    sha256 "e033777bb042384104721d33b2f933cc37f2abf540a6814cb07ade201e57cc72"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/mfuentesg/ksd/releases/download/v1.0.6/ksd_1.0.6_Linux_x86_64.tar.gz", :using => CurlDownloadStrategy.
-      sha256 "3f59e53bd83b37909288bdd94c9508764800dcb4ad3d295eb1c66f7fee40c8e9"
+      url "https://github.com/mfuentesg/ksd/releases/download/v1.0.6/ksd_1.0.6_Linux_x86_64.tar.gz", :using => :curl
+      sha256 "740b050d8bf9ceb80b320cb3d0ccfcb2af667b78856d80646e8f0f13b6556813"
     end
   end
 
