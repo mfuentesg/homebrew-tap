@@ -8,11 +8,11 @@ class Ksd < Formula
 
   if OS.mac?
     url "https://github.com/mfuentesg/ksd/releases/download/v1.0.6/ksd_1.0.6_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy.
-    sha256 "03df939ccb639f997e35d8168fa7d0bb85d7a868f9faec34542da0731a585edf"
+    sha256 "e8804839a8d1aa359b47121fac7a13d3a053750ad609cd9fb243f372312141b7"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/mfuentesg/ksd/releases/download/v1.0.6/ksd_1.0.6_Linux_x86_64.tar.gz", :using => CurlDownloadStrategy.
-      sha256 "ad8fdefc6f64316e380be38a7aaae433a35bbb7b0277afcfd27e78d8cc2d8c1b"
+      sha256 "3f59e53bd83b37909288bdd94c9508764800dcb4ad3d295eb1c66f7fee40c8e9"
     end
   end
 
