@@ -6,6 +6,8 @@ A collection of homebrew formulas
 
 - ksd
 
+## Usage
+
 ```
 brew install mfuentesg/tag/<formula>
 ```
