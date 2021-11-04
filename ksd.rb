@@ -6,32 +6,43 @@ class Ksd < Formula
   desc "ksd` is a tool, whose aim is help you to visualize in text plain your kubernetes secrets, either `yaml` or `json` outputs."
   homepage "https://github.com/mfuentesg/ksd"
   version "1.0.7"
-  bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/mfuentesg/ksd/releases/download/v1.0.7/ksd_1.0.7_Darwin_x86_64.tar.gz"
-      sha256 "420fd4013d354c2b66cc2407687eacb021359cc72e7cbf5bb01bbc1134ffdad9"
-    end
     if Hardware::CPU.arm?
       url "https://github.com/mfuentesg/ksd/releases/download/v1.0.7/ksd_1.0.7_Darwin_arm64.tar.gz"
-      sha256 "015a2d6e3fd43b666d3ae597706533624d03efb8c6388a42e9f29c5c5f4701fa"
+      sha256 "0f3c563d55d1b91299d0a87101c203d44ffb98d539eb8d96a1e367c651015d8a"
+
+      def install
+        bin.install "ksd"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/mfuentesg/ksd/releases/download/v1.0.7/ksd_1.0.7_Darwin_x86_64.tar.gz"
+      sha256 "19905124eece14e06b75d0405cf5ae3dce01fa1f3c3d3cf9bd1a157f3a16d385"
+
+      def install
+        bin.install "ksd"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/mfuentesg/ksd/releases/download/v1.0.7/ksd_1.0.7_Linux_x86_64.tar.gz"
-      sha256 "705c67c5de9f8a7f7688aab6576c4d8efe123465174198daaa9f777b792f36d6"
+      sha256 "e974930cb2f7d7c921e25da08e0d1a0ef2bfdd3951a2e4ee6cc51d9e60b2eea3"
+
+      def install
+        bin.install "ksd"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/mfuentesg/ksd/releases/download/v1.0.7/ksd_1.0.7_Linux_arm64.tar.gz"
-      sha256 "3efd2b191343736d9d73dbde1304ae154654277ecc8f7a37bf515b6d5b737552"
-    end
-  end
+      sha256 "848154a7d5a4d3709882080ce13e96e62f69da5db7bb54fdd747a68cdf0d09c7"
 
-  def install
-    bin.install "ksd"
+      def install
+        bin.install "ksd"
+      end
+    end
   end
 
   def caveats; <<~EOS
