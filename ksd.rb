@@ -6,43 +6,32 @@ class Ksd < Formula
   desc "ksd` is a tool, whose aim is help you to visualize in text plain your kubernetes secrets, either `yaml` or `json` outputs."
   homepage "https://github.com/mfuentesg/ksd"
   version "1.0.7"
+  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/mfuentesg/ksd/releases/download/v1.0.7/ksd_1.0.7_Darwin_x86_64.tar.gz"
-      sha256 "8977269b5584be384eb74b86c04ad84b305276552f8d8f708f45a2cad418d216"
-
-      def install
-        bin.install "ksd"
-      end
+      sha256 "420fd4013d354c2b66cc2407687eacb021359cc72e7cbf5bb01bbc1134ffdad9"
     end
     if Hardware::CPU.arm?
       url "https://github.com/mfuentesg/ksd/releases/download/v1.0.7/ksd_1.0.7_Darwin_arm64.tar.gz"
-      sha256 "6df029dd52e64cdd752b3a1bd436fe62af8da41685aaa6c6ad5def39ec35f5e7"
-
-      def install
-        bin.install "ksd"
-      end
+      sha256 "015a2d6e3fd43b666d3ae597706533624d03efb8c6388a42e9f29c5c5f4701fa"
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mfuentesg/ksd/releases/download/v1.0.7/ksd_1.0.7_Linux_arm64.tar.gz"
-      sha256 "c02b6075a959d997a90c5d28f59409be9987141521164402e29bd04827b0b454"
-
-      def install
-        bin.install "ksd"
-      end
-    end
     if Hardware::CPU.intel?
       url "https://github.com/mfuentesg/ksd/releases/download/v1.0.7/ksd_1.0.7_Linux_x86_64.tar.gz"
-      sha256 "dfb9b3e2c627c94c7e7fbd06ae85203a9d3b3a28e29364d6fdb64cbd45b343e0"
-
-      def install
-        bin.install "ksd"
-      end
+      sha256 "705c67c5de9f8a7f7688aab6576c4d8efe123465174198daaa9f777b792f36d6"
     end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/mfuentesg/ksd/releases/download/v1.0.7/ksd_1.0.7_Linux_arm64.tar.gz"
+      sha256 "3efd2b191343736d9d73dbde1304ae154654277ecc8f7a37bf515b6d5b737552"
+    end
+  end
+
+  def install
+    bin.install "ksd"
   end
 
   def caveats; <<~EOS
