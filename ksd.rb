@@ -5,20 +5,20 @@
 class Ksd < Formula
   desc "ksd` is a tool, whose aim is help you to visualize in text plain your kubernetes secrets, either `yaml` or `json` outputs."
   homepage "https://github.com/mfuentesg/ksd"
-  version "1.0.8"
+  version "1.0.7"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mfuentesg/ksd/releases/download/v1.0.8/ksd_1.0.8_Darwin_x86_64.tar.gz"
-      sha256 "c408927c61b517482aa6c730d362c409edc72f70c6bb0edd370f38244ef7d1a6"
+      url "https://github.com/mfuentesg/ksd/releases/download/v1.0.7/ksd_1.0.7_Darwin_x86_64.tar.gz"
+      sha256 "8977269b5584be384eb74b86c04ad84b305276552f8d8f708f45a2cad418d216"
 
       def install
         bin.install "ksd"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mfuentesg/ksd/releases/download/v1.0.8/ksd_1.0.8_Darwin_arm64.tar.gz"
-      sha256 "1bfa5cf88e9c4c4f5ca77efe56b1b4a7101db7f1e16a29e65124ee11ab096a21"
+      url "https://github.com/mfuentesg/ksd/releases/download/v1.0.7/ksd_1.0.7_Darwin_arm64.tar.gz"
+      sha256 "6df029dd52e64cdd752b3a1bd436fe62af8da41685aaa6c6ad5def39ec35f5e7"
 
       def install
         bin.install "ksd"
@@ -28,16 +28,16 @@ class Ksd < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mfuentesg/ksd/releases/download/v1.0.8/ksd_1.0.8_Linux_arm64.tar.gz"
-      sha256 "28c95977930f74c6f08706b5277938869afa6b12a78ee847714e6d7f548950fa"
+      url "https://github.com/mfuentesg/ksd/releases/download/v1.0.7/ksd_1.0.7_Linux_arm64.tar.gz"
+      sha256 "c02b6075a959d997a90c5d28f59409be9987141521164402e29bd04827b0b454"
 
       def install
         bin.install "ksd"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mfuentesg/ksd/releases/download/v1.0.8/ksd_1.0.8_Linux_x86_64.tar.gz"
-      sha256 "181aa2377d9e4c1087fad04daa7efe22004a44b7506bd0d96fbf85911809594d"
+      url "https://github.com/mfuentesg/ksd/releases/download/v1.0.7/ksd_1.0.7_Linux_x86_64.tar.gz"
+      sha256 "dfb9b3e2c627c94c7e7fbd06ae85203a9d3b3a28e29364d6fdb64cbd45b343e0"
 
       def install
         bin.install "ksd"
