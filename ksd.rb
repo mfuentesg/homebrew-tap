@@ -8,17 +8,17 @@ class Ksd < Formula
   version "1.0.7"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/mfuentesg/ksd/releases/download/v1.0.7/ksd_1.0.7_Darwin_arm64.tar.gz"
-      sha256 "7d994cbb5c70bcf0fd86f095b1400a788e0c226dbb8176bceea02f18400d7945"
+    if Hardware::CPU.intel?
+      url "https://github.com/mfuentesg/ksd/releases/download/v1.0.7/ksd_1.0.7_Darwin_x86_64.tar.gz"
+      sha256 "e6067b3127f84d7e11442652bdf247402c45cd91c40a7f63a0d14af75916ee30"
 
       def install
         bin.install "ksd"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/mfuentesg/ksd/releases/download/v1.0.7/ksd_1.0.7_Darwin_x86_64.tar.gz"
-      sha256 "d1c51ac6cbb09af95ba4190234546d0eaad632e60bfddb1952d62b41ea275009"
+    if Hardware::CPU.arm?
+      url "https://github.com/mfuentesg/ksd/releases/download/v1.0.7/ksd_1.0.7_Darwin_arm64.tar.gz"
+      sha256 "bd54ed80b29493098e99c4c408d0372811fdc270f6c0a5618dfd9dab9bc1afab"
 
       def install
         bin.install "ksd"
@@ -27,17 +27,17 @@ class Ksd < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/mfuentesg/ksd/releases/download/v1.0.7/ksd_1.0.7_Linux_x86_64.tar.gz"
-      sha256 "41c791ad7014b57c0ceb5913fa381b8e43bff19de6b09e3f6121f088074b57c5"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/mfuentesg/ksd/releases/download/v1.0.7/ksd_1.0.7_Linux_arm64.tar.gz"
+      sha256 "69d044b1872f02464bf9cf54f03a477d2624618894cfa850f95da9d228dab182"
 
       def install
         bin.install "ksd"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mfuentesg/ksd/releases/download/v1.0.7/ksd_1.0.7_Linux_arm64.tar.gz"
-      sha256 "8869b44b8b92bd96c3cf78f1dcb43ad8e9908ece12613cd6060415398659c288"
+    if Hardware::CPU.intel?
+      url "https://github.com/mfuentesg/ksd/releases/download/v1.0.7/ksd_1.0.7_Linux_x86_64.tar.gz"
+      sha256 "0f696c1d1c46f12b60da63255fec09e7df17346bb1218ba2d002607ba2bd3b15"
 
       def install
         bin.install "ksd"
