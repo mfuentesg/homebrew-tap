@@ -9,5 +9,5 @@ A collection of homebrew formulas
 ## Usage
 
 ```
-brew install mfuentesg/tag/<formula>
+brew install mfuentesg/tap/<formula>
 ```
