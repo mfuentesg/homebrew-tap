@@ -8,5 +8,5 @@ jobs:
     steps:
       - name:
         run: |
-          brew install mfuentesg/tap/ksd
+          brew install --cask mfuentesg/tap/ksd
           ksd version
